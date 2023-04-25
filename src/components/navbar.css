@@ -1,0 +1,140 @@
+.menubaritem{
+    display: flex;
+    
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.329);
+    width: 95%;
+    height: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    background-color: white;
+    left: 2%;
+    z-index: 9999;
+}
+li{
+    list-style: none;
+    color: black;
+}
+.nav-logo{
+    font-size: 1.78rem;
+    letter-spacing: 2x;
+    cursor: pointer;
+    white-space: nowrap;
+
+}
+.menu-link{
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    grid-gap: 20px;
+    list-style: none;
+    color:  black;
+    align-items: center
+    ;
+    left: -100%;
+    white-space: nowrap;
+
+}
+
+a{
+text-decoration: none;
+color: black;
+font-weight: 700;
+}
+.nav-link{
+    padding: 0 1rem;
+    list-style: none;
+
+}
+.nav-link:hover{
+    cursor: pointer;
+    background-color: gray;
+    border-radius: 10px;
+    color: aqua;
+    transition: all 0.2s ease-in-out;
+}
+.nav-link-mobile{
+    display: none
+}
+button{
+    border-radius: 10px;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background: gray
+    ;
+    font-weight: 700;
+    border: none;
+    color: aqua;
+}
+.menuicon{
+    display: none;
+    
+}
+@media  screen and (max-width : 850px) {
+    .menu-link{
+        display: flex;
+        flex-direction: column;
+        top: 0; 
+         left: -120%;
+         height: auto; 
+        margin-top: 2.9rem;
+        align-items: stretch;
+        padding: 3rem 0rem;
+        width: 100%;
+        position: absolute;
+        padding: 2rem;
+        opacity: 1;
+        background: rgb(255, 255, 255);
+        transition: all 0.2s ease-in-out;
+        border-radius: 2rem;
+    }
+    .menuicon{
+        display: block;
+        font-weight: 700;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: black;
+
+    }
+    .menu-link.active{
+        left: 0;
+        z-index: -1;
+        transition: all 0.5s ease;
+    }
+
+    .nav-link{
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+        font-size: 1.2rem;
+        padding: 1rem 0;
+
+    }
+    button{
+        display: none;
+    }
+    .nav-link-mobile{
+        display: block;
+        padding: 1.2rem;
+        background: #1c2a94;
+        border-radius: 15px;
+        width: 100%;
+        color: wheat;
+        cursor: pointer;
+        margin: auto;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+    .menubaritem{
+        z-index: 100;
+    }
+    }
+
+
+
+
